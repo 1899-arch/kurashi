@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>くらし電力</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>    
+  <!--ヘッダー-->
+  <header class="header">
+    <img src="img/logo.png" alt="ロゴ" class="header__logo">
+     <!--ヘッダーメニュー-->
+      <nav>
+        <ul class="header__block">
+          <li class="header__list"><a class="header__link" href="#home">くらし電力について</a></li>
+          <li class="header__list"><a class="header__link" href="#home">料金プラン</a></li>
+          <li class="header__list"><a class="header__link" href="#home">ご契約の流れ</a></li>
+          <li class="header__list"><a class="header__link" href="#home">よくあるご質問</a></li>
+          <li class="header__list"><a class="header__link" href="#home">ログイン</a></li>
+        </ul>
+      </nav>
+        <h1 class="header__text">くらしの「あたりまえ」を、守るために。</h1>
+  </header>
+
+  <!--メイン-->
+  <main>
+    <!--ニュース-->
+    <section class="info">
+      <h2 class=info__title>NEWS</h2>
+      <dl class="info__archives">
+        <dt class="info__date">10月1日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">9月15日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">8月12日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">7月25日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">6月14日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">5月16日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">4月13日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">3月28日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">3月14日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+        <dt class="info__date">2月21日</dt>
+        <dd class="info__text">テキストテキストテキスト</dd>
+      </dl>
+    </section>
+
+   <!--従来との比較-->
+    <section class="compare fade">
+      <p>当社は技術の改良を進めた結果、圧倒的なコストパフォーマンスを実現しました。<br>くらし電力はこれからも、地球のため、みなさんのために進化し続けます。</p>
+      <img src="img/compare.png" alt="従来との比較" class="compare__img">
+      <a href="#" class="compare__detail">詳しくはこちら</a>
+    </section>
+
+    <!-- ブログ -->
+    <section class="blog fade">
+      <h2 class="blog__title">― blog ―</h2>
+      <div class="blog__img-block">
+          <a class="blog__text" href="#"><img class="blog__img" src="img/blog1.jpg">テキストテキスト</a>
+          <a class="blog__text" href="#"><img class="blog__img" src="img/blog2.jpg">テキストテキスト</a>
+          <a class="blog__text" href="#"><img class="blog__img" src="img/blog3.jpg">テキストテキスト</a>
+      </div>
+    </section>
+
+    <!--画像ボタン-->
+    <section class="otherItem__block fade">
+      <a href="#"><img class="otherItem__img" src="img/question.png" alt="疑問に答えます"></a>
+      <a href="#"><img class="otherItem__img" src="img/kids2.png" alt="子どもたちに向けた活動"></a>
+    </section>
+  </main>
+
+  <!--フッター-->
+  <footer class="footer">
+    <p class="footer__text">社員によるSNS<br>毎日更新しています！</p>
+    <a class="footer__link" href="#"><img class="footer__icon" src="img/facebook.png" alt="フェイスブック"></a>
+    <a class="footer__link" href="#"><img class="footer__icon" src="img/Instagram.png" alt="インスタグラム"></a>
+    <a class="footer__link" href="#"><img class="footer__icon" src="img/twitter.png" alt="ツイッター"></a>
+    <ul class="footer__menu">
+      <li class="footer__list"><a class="footer__link" href="#">プライバシーポリシー</a></li>
+      <li class="footer__list"><a class="footer__link" href="#">企業情報</a></li>
+      <li class="footer__list"><a class="footer__link" href="#">サイトマップ</a></li>
+      <li class="footer__list"><a class="footer__link" href="#">採用</a></li>
+    </ul>
+    <small class="footer__copy">(c) Kurashi, Inc.</small>
+  </footer>
+
+  <!-- 申し込みボタン -->
+    <div class="fix__block">
+      <a href=""><img class="fix__btn" src="img/fix.png"></a>
+    </div>
+    
+
+
+  <script>
+    //フェードイン処理
+    var scrollAnimationElm = document.querySelectorAll('.fade'); /*fadeクラスの内容を指定*/
+    var scrollAnimationFunc = function() {
+        for(var i = 0; i < scrollAnimationElm.length; i++) {
+                  var triggerMargin = 200;
+                  if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                        scrollAnimationElm[i].classList.add('show'); /*画面内に入ったらクラスshowを追加（＝表示）*/
+                  }
+            }
+  }
+  window.addEventListener('load', scrollAnimationFunc); /*画面読み込んだらscroll~を実行*/
+  window.addEventListener('scroll', scrollAnimationFunc); /*画面スクロールしたらscroll~を実行*/
+
+</script>
+
+</body>
+</html>
